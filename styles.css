@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: "Consolas", monospace;
+}
+
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.neon-text {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  animation: neonFlicker 1.5s infinite alternate;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #3700a6,
+    0 0 40px #3700a6;
+}
+
+@keyframes neonFlicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #3700a6,
+      0 0 40px #3700a6;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.tagline {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.cta-button {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff0000;
+  background: transparent;
+  border: 2px solid #ff0000;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.cta-button:hover {
+  color: #fff;
+  background: #ff0000;
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 40px #ff0000;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, transparent 70%);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cta-button:hover::before {
+  opacity: 1;
+}
+
+.cta-button-purple {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #3700a6;
+  background: transparent;
+  border: 2px solid #3700a6;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.cta-button-purple:hover {
+  color: #fff;
+  background: #3700a6;
+  box-shadow:
+    0 0 10px #3700a6,
+    0 0 20px #3700a6,
+    0 0 40px #3700a6;
+}
+
+.cta-button-purple::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(55, 0, 166, 0.4) 0%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cta-button-purple:hover::before {
+  opacity: 1;
+}
+
+span {
+  position: fixed;
+  bottom: 18px;
+  color: grey;
+}
+
+.github {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 64px;
+  cursor: pointer;
+}
+
+.bmc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgb(189, 95, 255);
+  color: white;
+  border-radius: 32px;
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px;
+  z-index: 9999;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+  transform: scale(1);
+  img {
+    height: 36px;
+    width: 36px;
+    margin: 0;
+    padding: 0;
+  }
+}
