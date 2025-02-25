@@ -108,7 +108,6 @@ html {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, transparent 70%);
-  transform: rotate(45deg);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -152,7 +151,6 @@ html {
     rgba(55, 0, 166, 0.4) 0%,
     transparent 70%
   );
-  transform: rotate(45deg);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
